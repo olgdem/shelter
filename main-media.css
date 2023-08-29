@@ -1,0 +1,494 @@
+@media screen and (max-width: 1025px) {
+    .container {
+        max-width: 1024px;
+        padding: 0 30px;
+    }
+
+    .footer-container {
+        max-width: 1024px;
+        padding: 30px 30px 0 30px;
+    }
+
+    .header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+
+
+    .section-1__content__main-page {
+        max-width: 1024px;
+    }
+
+    
+
+    .slider {
+        width: 900px;
+    }
+
+    .slider-container, .slider-line, .slider-buttons  {
+        max-width: 900px;
+    }
+
+    .slider-buttons {
+        gap: 900px;
+        left: -52px;
+    }
+
+    .slider-line {
+        gap: 60px;
+    }
+
+    .get-to-know {
+        margin-bottom: 100px;
+    }
+
+    .icons-container {
+        width: 963px;
+    }
+
+    .icons {
+        margin-right: 90px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .container, .footer-container {
+        max-width: 920px;
+        padding: 0 30px;
+    }
+
+    .section-1__content__main-page {
+        /* min-height: 728px; */
+        width: 1200px;
+        margin: 0 40px 100px 40px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-1__text-and-image {
+        margin-top: 60px;
+    }
+
+    .section-1__friend-button {
+        margin-bottom: 100px;
+    }
+
+    .section-1__big-puppy {
+        width: 569px;
+        height: 593px;
+    }
+
+    .section-2__about-shelter {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .slider-container {
+        position: relative;
+        max-width: 708px;
+    }
+
+    .slider-buttons {
+        max-width: 708px;
+        left: 0;
+        gap: 593%;
+
+    }
+
+    .slider {
+        width: 580px;
+    }
+
+    .slider-line {
+        gap: 40px;
+    }
+
+    
+
+    .section-4 {
+        margin: 0 auto;
+    }
+
+    
+
+    .icons-container {
+        width: 859px;
+    }
+
+    .icons, .icons:nth-child(5) {
+        margin-right: 17%;
+        
+    }
+
+    .icons:nth-child(3), .icons:nth-child(6) {
+        margin-right: 0;
+    }
+
+    .you-can {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .content-block {
+        margin-bottom: 0;
+    }
+
+    .dog {
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+
+    
+
+    .footer-container {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+    }
+
+    .colomn-1 {
+        margin-right: 60px;
+    }
+
+    .footer-puppy {
+        width: 300px;
+        height: 310px;
+
+    }
+}
+
+@media screen and (max-width: 769px) {
+
+    .container, .footer-container {
+        max-width: 768px;
+        padding: 0 10px;
+    }
+
+    .icons-container {
+    width: 706px;
+    
+}
+}
+
+
+
+
+@media screen and (max-width: 415px) {
+
+    .container, .footer-container {
+        max-width: 414px;
+        
+    }
+
+    .header__main-page, .section-1, .footer {
+        background-size: auto;
+    }
+
+    .logo {
+        margin-left: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    
+
+    .navigation {
+        display: none;
+    }
+
+    .active-nav-menu {
+        display: block;
+    }
+
+    .nav-list {
+        position: absolute;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 180px;
+        font-size: 32px;
+
+    }
+
+    .nav-list li {
+        margin-bottom: 40px;
+    }
+
+    .burger {
+        width: 30px;
+        height: 22px;
+        position: relative;
+        z-index: 6;
+        right: 10px;
+        top: 10px;
+    }
+
+    .burger span, 
+    .burger span::after, 
+    .burger span::before  {
+        display: block;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: #F1CDB3;
+        position: absolute;
+        border: 0;
+
+    }
+
+    .burger span::before {
+        left: 0;
+        top: -10px;
+        margin-bottom: 10px;
+    }
+
+    .burger span::after {
+        left: 0;
+        bottom: -10px;
+        margin-top: 10px;
+    }
+
+    .burger.active {
+        transform: rotate(90deg);
+        right: -30px;
+        top: 0;
+    }
+
+    .burger-menu {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 1173px;
+        background-color: #292929;
+        left: 0;
+        
+    }
+
+    .active-burger-menu {
+        display: block;
+        
+    }
+
+    h1 {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        width: 224px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .section-1__text-and-image {
+        display: flex;
+        margin-top: 60px;
+        width: 293px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-1__text-and-image p {
+        text-align: center;
+    }
+
+    .section-1__big-puppy {
+        width: 260px;
+        height: 272px;
+    }
+
+    .section-2__text-block {
+        width: 300px;
+    }
+
+    .section-2__about-shelter {
+        display: flex;
+        justify-content: space-between;
+        width: 320px;
+        margin: 0 auto;
+        margin-top: 42px;
+        margin-bottom: 42px;
+    }
+
+    .section-2__about-shelter h2 {
+        text-align: center;
+    }
+
+    
+
+    .about-pets {
+        width: 260px;
+        height: 353.6px;
+    }
+
+    .pets-headline {
+        margin-bottom: 42px;
+        padding-top: 42px;
+    }
+
+    .slider-container {
+        max-width: 300px;
+    }
+
+    .slider-buttons {
+        max-width: 300px;
+        gap: 94%;
+        left: 49px;
+        top: 466px;
+    }
+
+    .slider-line {
+        gap: 89px;
+    }
+
+    .slider {
+        width: 270px;
+    }
+
+    .get-to-know {
+        margin-bottom: 42px;
+        margin-top: 114px;
+    }
+
+    .how-you-can h2 {
+        padding-top: 42px;
+        margin-bottom: 42px;
+    }
+
+    .icons-container {
+        width: 262px;
+        margin: 0 auto;
+    }
+
+    .icons, .icons:nth-child(5), 
+    .icons:nth-child(3), .icons:nth-child(6) {
+        margin-right: 30px;
+    }
+
+    .icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icons p {
+        font-size: 15px;
+    }
+
+    .content-block {
+        margin-top: 42px;
+        margin-bottom: 0;
+        width: 280px;
+        min-height: 282px;
+    }
+
+    .dog {
+        width: 260px;
+        height: 135.2px;
+        margin-top: 42px;
+        margin-bottom: 42px;
+    }
+
+    .you-can h2 {
+        text-align: center;
+    }
+
+    .content-block p {
+        text-align: center;
+        letter-spacing: 0.01em;
+        width: 300px;
+    }
+    
+    .content-block p:last-child {
+        width: 280px;
+    }
+
+    .call {
+        width: 281px;
+    }
+
+    .call a {
+        font-size: 15px;
+    }
+
+    .footer-puppy {
+        width: 260px;
+        height: 269px;
+    }
+
+    .colomn-1 {
+        margin-right: 0;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .footer h2 {
+        text-align: center;
+    }
+
+    .colomn-2 h2 {
+        width: 280px;
+    }
+
+    .section-1__text-and-image {
+        margin-top: 0;
+    }
+
+    /* _____MODAL_____ */
+
+    .popup__content {
+        width: 230px;
+        min-width: 230px;
+        height: 460px;
+    }
+
+    .popup__content img {
+        display: none;
+    }
+
+    .popup__text {
+        margin: 24px 20px 0px 20px;
+        font-size: 13px;
+    }
+
+    .popup__text p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .popup__close {
+        margin-top: -493px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+
+    .container, .footer-container {
+        max-width: 375px;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container, .footer-container {
+        max-width: 320px;
+        padding: 0px 10px;
+    }
+
+    
+
+    .section-1__content__main-page {
+        width: 320px;
+    }
+
+}
+    
