@@ -1,10 +1,8 @@
+let originalCards = []; 
+let currentPage = 1;
+let cardsPerPage = getCardsPerPage(); // Determining the Number of Cards Per Page
 
-
- let originalCards = []; 
- let currentPage = 1;
- let cardsPerPage = getCardsPerPage(); // Определение количества карточек на странице
-
-// // Получение данных и отображение первой страницы
+// // Fetching Data and Displaying the First Page
 async function getCards() {
     const response = await fetch('/pets.json');
     content = await response.json();
@@ -18,16 +16,16 @@ async function getCards() {
 }
 getCards();
 
-// Отображение карточек на странице
+// Displaying Cards on the Page
  async function showCards(page) {
      let list = document.querySelector('.pets-container');
-     list.innerHTML = ''; // Очищаем контейнер перед добавлением новых карточек
+     list.innerHTML = ''; // Clear the container before adding new cards
 
      const startIndex = (page - 1) * cardsPerPage;
      const endIndex = startIndex + cardsPerPage;
 
      const cardsToShow = originalCards.slice(startIndex, endIndex);
-     // shuffleArray(cardsToShow);
+     
 
      cardsToShow.forEach(element => {
          const item = document.createElement('div');
@@ -45,7 +43,7 @@ getCards();
      });
  }
 
- // Перемешивание массива
+ // Shuffling the array
  function shuffleArray(array) {
      for (let i = array.length - 1; i > 0; i--) {
          const j = Math.floor(Math.random() * (i + 1));
@@ -53,7 +51,7 @@ getCards();
      }
  }
 
- // Определение количества карточек на странице в зависимости от размера окна
+ // Determining the number of cards per page based on window size
  function getCardsPerPage() {
     if (window.innerWidth <= 320) {
         return 3;  
@@ -64,29 +62,18 @@ getCards();
     }
 }
 
-//  function getCardsPerPage() {
-//     if (window.innerWidth <= 768) {
-//         return 6; 
-//     } else if (window.innerWidth >= 320) {
-//         return 3;  
-//     }
-//     else  {
-//         return 8;  
-//     }
-// }
-
- // Обработчик изменения размера окна
+ // Window resize handler
  window.addEventListener('resize', () => {
     const newCardsPerPage = getCardsPerPage();
     if (newCardsPerPage !== cardsPerPage) {
         cardsPerPage = newCardsPerPage;
-        currentPage = 1; // Сбрасываем текущую страницу до первой
+        currentPage = 1; // Reset the current page to the first
         listPage();
-        changePage(currentPage); // Обновляем отображение с новыми данными
+        changePage(currentPage); // Update the display with new data
     }
 });
 
- // Переключение страницы и обновление отображения
+ // Switching the page and updating the display
  function changePage(page) {
      if (page >= 1 && page <= Math.ceil(originalCards.length / cardsPerPage)) {
          currentPage = page;
@@ -95,17 +82,11 @@ getCards();
      }
  }
 
-
-
-
-
-
-
  function listPage() {
     const pagination = document.querySelector('.pagination-list');
     pagination.innerHTML = '';
 
-    // Кнопка "<<" для начала списка
+    // Button '<<' for the beginning of the list
     let firstPage = document.createElement('li');
     firstPage.innerText = '<<';
     firstPage.addEventListener('click', () => {
@@ -118,7 +99,7 @@ getCards();
     }
     pagination.appendChild(firstPage);
 
-    // Кнопка "<" для предыдущей страницы
+    // Button '<' for the previous page
     let prevPage = document.createElement('li');
     prevPage.innerText = '<';
     prevPage.addEventListener('click', () => {
@@ -127,17 +108,17 @@ getCards();
         }
     });
     if (currentPage === 1) {
-        prevPage.classList.add('disabled', 'prev-page'); // Добавление классов
+        prevPage.classList.add('disabled', 'prev-page'); // Adding classes
     }
     pagination.appendChild(prevPage);
 
-    // Кнопка с номером текущей страницы
+    // Button with the current page number
     let currentPageBtn = document.createElement('li');
     currentPageBtn.innerText = currentPage;
     currentPageBtn.classList.add('active');
     pagination.appendChild(currentPageBtn);
 
-    // Кнопка ">" для следующей страницы
+    // Button ">" for the next page
     let nextPage = document.createElement('li');
     nextPage.innerText = '>';
     nextPage.addEventListener('click', () => {
@@ -150,7 +131,7 @@ getCards();
     }
     pagination.appendChild(nextPage);
 
-    // Кнопка ">>" для конца списка
+    // Button ">>" for the end of the list
     let lastPage = document.createElement('li');
     lastPage.innerText = '>>';
     lastPage.addEventListener('click', () => {
@@ -165,13 +146,9 @@ getCards();
     pagination.appendChild(lastPage);
 }
 
-  
-
+//   ___MODAL___
     const popup = document.querySelector('.popup');
     
-
-
-
 async function showModal(id, page) {
     
     const pet = originalCards.find(item => item.id === id);
@@ -203,10 +180,8 @@ console.log(btnClose);
     if (btnClose) {
         btnClose.addEventListener("click", () => {
             closeModal();
-            showCards(page); // Передать текущую страницу при закрытии модального окна
-        });
-    
-        
+            showCards(page); // Pass the current page when closing the modal window
+        }); 
     }
     
     
@@ -222,7 +197,6 @@ console.log(btnClose);
         }
     });
 }
-
 
 
      function closeModal() {

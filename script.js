@@ -22,50 +22,44 @@ document.querySelector('.slider__button-next').addEventListener('click', functio
 
 // __________PETS CARDS________
 
-              async function getCards() {
-                 const response = await fetch('/pets.json');
-                 const content = await response.json();
- 
-                showCards(content);
-              }
-              getCards()
+    async function getCards() {
+        const response = await fetch('pets.json');
+        const content = await response.json();         
+          showCards(content);
+        }
+          getCards()
 
               
-              async function showCards(content) {
+    async function showCards(content) {
+        let list = document.querySelector('.slider-line');
+        let cards = content;
+        cards.forEach(element => {
+                  
+            const item = document.createElement('div');
+            item.classList.add('card');
+            item.innerHTML = 
+                 `
+                  <img src="${element.img}" alt="${element.type}">
+                  <p class="pets-name">${element.name}</p>
+                  <button class="slider-button__learn">Learn more</button>
+                `     
 
-                let list = document.querySelector('.slider-line');
-                let cards = content;
-                cards.forEach(element => {
-                    
-                    const item = document.createElement('div');
-                    item.classList.add('card');
-                    
-                    item.innerHTML = 
-                                       `
-                                       <img src="${element.img}" alt="${element.type}">
-                                       <p class="pets-name">${element.name}</p>
-                                       <button class="slider-button__learn">Learn more</button>
-                                   `
-                    list.appendChild(item);
-                    let button = item.querySelector('.slider-button__learn');
-                    button.addEventListener('click', () => showModal(element.id))
-                    
+            list.appendChild(item);
+            let button = item.querySelector('.slider-button__learn');
+            button.addEventListener('click', () => showModal(element.id))                
                                     
- });
+              });
                  }
 
-                 const popup = document.querySelector('.popup');
+    const popup = document.querySelector('.popup');
                  
-                 async function showModal(id) {
-                    const response = await fetch('/pets.json');
-                    const content = await response.json();
-                    const pet = content.find(item => item.id === id);
+    async function showModal(id) {
+        const response = await fetch('pets.json');
+        const content = await response.json();
+        const pet = content.find(item => item.id === id);
                   
-                    console.log(pet);
-                  
-                    
-                    popup.classList.add('popup-show');
-                    document.body.classList.add("stop-scrolling");
+        popup.classList.add('popup-show');
+        document.body.classList.add("stop-scrolling");
 
                     popup.innerHTML = `
                       <div class="popup__content">
@@ -85,7 +79,7 @@ document.querySelector('.slider__button-next').addEventListener('click', functio
                       <img src="/assets/icons/modal_close_button.svg" class="popup__close" alt="close button" style="width:52px">
                     `;
                     const btnClose = document.querySelector(".popup__close");
-  btnClose.addEventListener("click", () => closeModal());
+        btnClose.addEventListener("click", () => closeModal());
                   }
 
 

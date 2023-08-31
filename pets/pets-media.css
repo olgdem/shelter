@@ -1,4 +1,5 @@
 @media screen and (max-width: 1200px) {
+
     .container {
         max-width: 1200px;
         padding: 0 30px;
@@ -11,6 +12,7 @@
 }
 
 @media screen and (max-width: 1025px) {
+
     .container {
         max-width: 1024px;
         padding: 0 30px;
@@ -33,6 +35,7 @@
         max-width: 1000px;
         padding: 0 30px;
     }
+
     .pets-container {
         width: 900px;
         padding: 0 5px;
@@ -40,6 +43,7 @@
 }
 
 @media screen and (max-width: 920px) {
+
     .container, .footer-container {
         max-width: 920px;
         padding: 0 30px;
@@ -84,7 +88,6 @@
     }
 
     .footer-container {
-        /* flex-direction: column; */
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -98,11 +101,11 @@
     .footer-puppy {
         width: 300px;
         height: 310px;
-
     }
 }
 
 @media screen and (max-width: 769px) {
+
     .container, .footer-container {
         max-width: 768px;
         padding: 0 30px;
@@ -113,10 +116,6 @@
         margin-top: 30px;
         margin-bottom: 30px;
     }
-
-    
-
-    
 
     .pets-container {
         gap: 40px;
@@ -157,7 +156,6 @@
     }
 
     .footer-container {
-        /* flex-direction: column; */
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -171,13 +169,11 @@
     .footer-puppy {
         width: 300px;
         height: 310px;
-
     }
-
-    
 }
 
 @media screen and (max-width: 580px) {
+
     .navigation {
         display: none;
     }
@@ -192,11 +188,9 @@
         display: flex;
         flex-direction: column;
         width: 420px;
-        
         right: 0;
         top: 180px;
         font-size: 32px;
-
     }
 
     .nav-list li {
@@ -226,7 +220,6 @@
         background-color: #F1CDB3;
         position: absolute;
         border: 0;
-
     }
 
     .burger-pets span {
@@ -258,13 +251,11 @@
         width: 420px;
         height: 1173px;
         background-color: #292929;
-        right: 0;
-        
+        right: 0;    
     }
 
     .active-burger-menu {
-        display: block;
-        
+        display: block;   
     }
 
     .pets-container {
@@ -276,8 +267,7 @@
 @media screen and (max-width: 415px) {
 
     .container, .footer-container {
-        max-width: 414px;
-        
+        max-width: 414px; 
     }
 
     .header__main-page, .section-1, .footer {
@@ -285,12 +275,10 @@
     }
 
     .burger-menu {
-        
         width: 320px;
         height: 1173px;
         background-color: #292929;
         right: 0;
-        
     }
 
     .nav-list {
@@ -304,7 +292,6 @@
         background: none;
     }
 
-    
     .footer-puppy {
         width: 260px;
         height: 269px;
@@ -360,6 +347,7 @@
 }
 
 @media screen and (max-width: 320px) {
+    
     .container, .footer-container {
         max-width: 320px;
         padding: 0px 10px;

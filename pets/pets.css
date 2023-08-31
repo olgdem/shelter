@@ -1,7 +1,7 @@
 html  {
-    box-sizing: border-box;
-    
+    box-sizing: border-box; 
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif; 
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -55,8 +55,7 @@ body {
     align-items: center;
     width: 443px;
     list-style: none;
-    padding: 0; 
-    
+    padding: 0;  
 }
 
 .nav-a, .nav-a-marked {
@@ -78,16 +77,6 @@ body {
 .pet {
     color: #545454;  
 }
-
-
-
-/* .cozy {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 400;
-    font-size: 32px;
-    color: #F1CDB3;
-    margin: 0;
-} */
 
 .main {
     flex: 1 1 auto;
@@ -117,7 +106,7 @@ h2 {
     color: #545454;
     display: block;
     margin-bottom: 60px;
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 .pets-container {
@@ -152,7 +141,6 @@ h2 {
     margin-bottom: 30px;
 }
 
-
 .modal-button__learn {
     width: 187px;
     height: 52px;
@@ -177,36 +165,6 @@ h2 {
 .modal-button__learn:hover {
     background: #F1CDB3;
 }
-/* .slider-buttons {
-    max-width: 1280px;
-    display: flex;
-    position: absolute;
-    left: 53px;
-    gap: 1031%;
-    top: 192px;
-    z-index: 5;
-    transition: all .3s ease;
-}
-
-.slider__button-prev {
-    content: url(/assets/icons/button_arrow-prev.svg);
-    width: 52px;
-    height: 52px; 
-}
-
-.slider__button-prev:hover {
-    content: url(/assets/icons/button_arrow-prev-hover.svg);
-}
-
-.slider__button-next {
-   content: url(/assets/icons/button_arrow-next.svg);
-    width: 52px;
-    height: 52px;  
-}
-
-.slider__button-next:hover {
-    content: url(/assets/icons/button_arrow-next-hover.svg);
-} */
 
 .pagination {
     width: 320px;
@@ -216,19 +174,14 @@ h2 {
 }
  
 .pagination-list {
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-
 }
 
 .active {
     background-color: #F1CDB3;
 }
-
-
 
 .pagination-list li {
     display: block;
@@ -247,7 +200,6 @@ h2 {
     letter-spacing: 1.2px;
     list-style: none;
     cursor: pointer;
-
 }
 
 .pagination-list li.disabled {
@@ -306,7 +258,6 @@ h2 {
     width: 350px;
     height: 102px;
     margin: 50px 20px 88px 30px;
-
 }
 
 .popup__text ul li{
@@ -328,7 +279,6 @@ h2 {
     letter-spacing: 0.06em;
     color: #000000;
     margin-bottom: 10px;
-
 }
 
 .popup__text span {
@@ -338,9 +288,8 @@ h2 {
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #000000;
-    
-
 }
+
 .popup__text p {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -360,8 +309,7 @@ h2 {
 footer {
     width: 1280px;
     width: 100%;
-    /* height: 350px; */
-    background-image: url(/assets/img/start-screen-background.png);
+    background-image: url(assets/img/start-screen-background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
