@@ -309,7 +309,7 @@ h2 {
 footer {
     width: 1280px;
     width: 100%;
-    background-image: url(assets/img/start-screen-background.png);
+    background-image: url(../assets/img/start-screen-background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }

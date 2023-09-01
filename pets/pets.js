@@ -4,7 +4,7 @@ let cardsPerPage = getCardsPerPage(); // Determining the Number of Cards Per Pag
 
 // // Fetching Data and Displaying the First Page
 async function getCards() {
-    const response = await fetch('pets/pets-page.json');
+    const response = await fetch('../pets/pets-page.json');
     content = await response.json();
     for (let i = 0; i < 6; i++) {
         originalCards.push(...content);
@@ -172,7 +172,7 @@ async function showModal(id, page) {
                 </ul>
             </div>
         </div>
-        <img src="/assets/icons/modal_close_button.svg" class="popup__close" alt="close button" style="width:52px">
+        <img src="../assets/icons/modal_close_button.svg" class="popup__close" alt="close button" style="width:52px">
     `;
 
     const btnClose = document.querySelector(".popup__close");

@@ -76,7 +76,7 @@ document.querySelector('.slider__button-next').addEventListener('click', functio
                           </ul>
                         </div>
                       </div>
-                      <img src="/assets/icons/modal_close_button.svg" class="popup__close" alt="close button" style="width:52px">
+                      <img src="assets/icons/modal_close_button.svg" class="popup__close" alt="close button" style="width:52px">
                     `;
                     const btnClose = document.querySelector(".popup__close");
         btnClose.addEventListener("click", () => closeModal());

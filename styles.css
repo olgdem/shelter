@@ -115,11 +115,11 @@ h1 {
 }
 
 .section-1__friend-button {
-    width: 207px;
+    /* width: 207px; */
     height: 52px;
     background: #F1CDB3;
     border-radius: 100px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -127,6 +127,8 @@ h1 {
     letter-spacing: 0.06em;
     color: #292929;
     border: 2px solid #F1CDB3;
+    text-decoration: none;
+    padding: 15px 45px;
 }
 
 .section-2__about-shelter {
