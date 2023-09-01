@@ -1,4 +1,5 @@
 let originalCards = []; 
+let shuffledCards = [];
 let currentPage = 1;
 let cardsPerPage = getCardsPerPage(); // Determining the Number of Cards Per Page
 
@@ -9,6 +10,8 @@ async function getCards() {
     for (let i = 0; i < 6; i++) {
         originalCards.push(...content);
     }
+    shuffledCards = [...originalCards];
+    shuffleArray(shuffledCards);
     console.log(originalCards);
     showCards(currentPage);
     listPage();
@@ -20,13 +23,12 @@ getCards();
  async function showCards(page) {
      let list = document.querySelector('.pets-container');
      list.innerHTML = ''; // Clear the container before adding new cards
-     shuffleArray(originalCards);
 
      const startIndex = (page - 1) * cardsPerPage;
      const endIndex = startIndex + cardsPerPage;
 
      const cardsToShow = originalCards.slice(startIndex, endIndex);
-     
+     shuffleArray(cardsToShow);
 
      cardsToShow.forEach(element => {
          const item = document.createElement('div');
