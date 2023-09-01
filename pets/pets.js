@@ -4,7 +4,7 @@ let cardsPerPage = getCardsPerPage(); // Determining the Number of Cards Per Pag
 
 // // Fetching Data and Displaying the First Page
 async function getCards() {
-    const response = await fetch('../pets.json');
+    const response = await fetch('pets/pets-page.json');
     content = await response.json();
     for (let i = 0; i < 6; i++) {
         originalCards.push(...content);
